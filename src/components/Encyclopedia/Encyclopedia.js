@@ -12,7 +12,7 @@ export default function Encyclopedia({ data }) {
 	const { encyclopediaPage } = useParams();
 	const currentEncPage = data.filter((item) => item.name === encyclopediaPage);
 	const namePage = currentEncPage[0].name;
-	const url = `http://acnhapi.com/v1a/${namePage}`;
+	const url = `https://acnhapi.com/v1a/${namePage}`;
 
 	const [posts, setPosts] = useState([]);
 	const [allPosts, setAllPosts] = useState([]);

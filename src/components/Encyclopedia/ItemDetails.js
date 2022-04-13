@@ -6,10 +6,9 @@ export default function ItemDetails({ data }) {
 	const { encyclopediaPage } = useParams();
 	const currentEncPage = data.filter((item) => item.name === encyclopediaPage);
 	const namePage = currentEncPage[0].name;
-	const url = `http://acnhapi.com/v1a/${namePage}`;
+	const url = `https://acnhapi.com/v1a/${namePage}`;
 
 	const [posts, setPosts] = useState([]);
-	const [loading, setLoading] = useState(false);
 
 	// Fetch data from the API
 	useEffect(() => {
@@ -28,10 +27,7 @@ export default function ItemDetails({ data }) {
 
 	return (
 		<main className="item-details-page">
-			<div className="item-details-container">
-				{/* 				<p>{currentItem[0].name["name-USen"]}</p>
-				<p>{currentItem[0]["catch-phrase"]}</p> */}
-			</div>
+			<div className="item-details-container"></div>
 		</main>
 	);
 }
